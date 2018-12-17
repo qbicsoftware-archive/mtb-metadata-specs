@@ -1,0 +1,7 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://github.com/qbicsoftware/",
+    "title": "DNA-based finding",
+    "description": "Somatic and germline variant based finding with diagnosis",
+    "type": "object"
+}
