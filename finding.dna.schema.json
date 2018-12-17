@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "http://github.com/qbicsoftware/",
+    "$id": "https://raw.githubusercontent.com/qbicsoftware/mtb-data-specs/master/finding.dna.schema.json",
     "title": "DNA-based finding",
     "description": "Somatic and germline variant based finding with diagnosis",
     "type": "object"
