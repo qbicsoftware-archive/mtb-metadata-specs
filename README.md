@@ -1,2 +1,2 @@
-# MTB data specification
-A collection of molecular tumor board (MTB) related specifications.
+# Metadata specification collection
+A prototype collection of metadata specifications.

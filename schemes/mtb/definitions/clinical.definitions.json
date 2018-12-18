@@ -1,0 +1,18 @@
+{
+    "definitions": {
+        "patient": {
+            "type": "object",
+            "properties": {
+                "id": { "$ref": "#/definitions/qbic_id" },
+                "date_of_birth": {
+                    "type": "string",
+                    "pattern": "[0-9]{1,2}\\.[0-9]{1,2}\\.[0-9]{4}$"
+                }
+            }
+        },
+        "qbic_id": {
+            "type": "string",
+            "pattern": "(Q[A-Z0-9]{4}[0-9]{3}[A-Z][A-Z0-9]$)|(Q[A-Z0-9]{4}ENTITY-[0-9]*$)"
+        }
+    }
+}
