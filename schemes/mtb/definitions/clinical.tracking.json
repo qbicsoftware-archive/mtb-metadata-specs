@@ -1,4 +1,5 @@
 {
+    "definitions": {
     "trace": {
         "type": "object",
         "properties": {
@@ -19,4 +20,5 @@
             "submitTo": { "type": "string" }
         }
     }
+}
 }

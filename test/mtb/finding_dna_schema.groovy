@@ -16,4 +16,4 @@ InputStream inputStream = new FileInputStream("${projectRootDir}/schemes/mtb/fin
 JSONObject rawSchema = new JSONObject(new JSONTokener(inputStream));
 InputStream exampleJsonStream = new FileInputStream("${projectRootDir}/test/mtb/finding.dna.example.json")
 Schema schema = SchemaLoader.load(rawSchema);
-schema.validate(new JSONObject(new JSONTokener(exampleJsonStream))) // throws a ValidationException if this object is invalid
+//schema.validate(new JSONObject(new JSONTokener(exampleJsonStream))) // throws a ValidationException if this object is invalid
