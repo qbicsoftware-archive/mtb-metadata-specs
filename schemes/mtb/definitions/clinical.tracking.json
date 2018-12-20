@@ -1,0 +1,22 @@
+{
+    "trace": {
+        "type": "object",
+        "properties": {
+            "stations": {
+                "type": "array",
+                "items": { "$ref": "#/station" }
+            }
+        }
+    },
+    "station": {
+        "type": "object",
+        "properties": {
+            "facility": { "type": "string" },
+            "orderId": { "type": "string" },
+            "receivedDataOn": { "$ref": "clinical.common.json#/date" },
+            "receivedFrom": { "type": "string" },
+            "submitOn": { "$ref": "clinical.common.json#/date" },
+            "submitTo": { "type": "string" }
+        }
+    }
+}

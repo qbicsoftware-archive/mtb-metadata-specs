@@ -1,0 +1,21 @@
+{
+    "single_nucleotide_polymorphism": {
+        "type": "object",
+        "properties": {
+
+        }
+    },
+    "copynumber_variation": {
+        "type": "object",
+        "properties": {
+            
+        }
+    },
+    "structural_variant": {
+        "type": "object",
+        "properties": {
+            
+        }
+    }
+
+}

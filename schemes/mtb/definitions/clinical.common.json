@@ -1,0 +1,114 @@
+{
+    "date": {
+        "type": "string",
+        "pattern": "[0-9]{1,2}\\.[0-9]{1,2}\\.[0-9]{4}$"
+    },
+    "dna_finding": {
+        "type": "object",
+        "properties": {
+            "tracking": { "$ref": "#/tracking" },
+            "variants": { 
+                "type": "object",
+                "properties": {
+                    "germline_variants": {
+                        "type": "object",
+                        "properties": {
+                            "snv": { "$ref": "clinical.variants.json#/single_nucleotide_polymorphism" },
+                            "cnv": { "$ref": "clinical.variants.json#/copynumber_variation" },
+                            "sv": { "$ref": "clinical.variants.json#/structual_variant" } 
+                        }
+                    },
+                    "somatic_variants": {
+                        "type": "object",
+                        "properties": {
+                            "snv": { "$ref": "clinical.variants.json#/single_nucleotide_polymorphism" },
+                            "cnv": { "$ref": "clinical.variants.json#/copynumber_variation" },
+                            "sv": { "$ref": "clinical.variants.json#/structual_variant" } 
+                        }
+                    }
+                }
+            },
+            "summary": {
+                "type": "object",
+                "properties": {
+                    "diagnosis": { "type": "string" },
+                    "tumor_content": { 
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1
+                    },
+                    "pathogenic_germline": {
+                        "type": "string",
+                        "enum": ["yes", "no", "NA"]
+                    },
+                    "mutational_load": {
+                        "type": "string",
+                        "enum": ["low", "medium", "high"]
+                    },
+                    "chromosomal_instability": {
+                        "type": "string",
+                        "enum": ["yes", "no"]
+                    },
+                    "quality_flags": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": ["low_quality_snvs",
+                                "low_quality_cnvs",
+                                "low_quality_svs",
+                                "low_dna_amount"]
+                        }
+                    },
+                    "reference_genome": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    },
+    "dna_sample": {
+        "type": "object",
+        "properties": {
+            "id": { "$ref": "#/qbic_id" },
+            "finding": { "$ref": "#/dna_finding" },
+            "quality": { "type": "string"},
+            "sequencing": { "$ref": "#/sequencing" }
+        }
+    },
+    "order": {
+        "type": "object",
+        "properties": {
+            "id": { "type": "string" },
+            "date": { "type": "#/date" }
+        }
+    },
+    "patient": {
+        "type": "object",
+        "properties": {
+            "id": { "$ref": "#/qbic_id" },
+            "date_of_birth": { "$ref": "#/date" }
+        }
+    },
+    "qbic_id": {
+        "type": "string",
+        "pattern": "(Q[A-Z0-9]{4}[0-9]{3}[A-Z][A-Z0-9]$)|(Q[A-Z0-9]{4}ENTITY-[0-9]*$)"
+    },
+    "sequencing": {
+        "type": "object",
+        "properties": {
+            "instrument": {
+                "type": "string"
+            },
+            "order": { 
+                "type": { "$ref": "#/order" }
+            },
+            "run_date": {
+                "type": { "$ref": "#/date" }
+            },
+            "technology": {
+                "type": "string",
+                "enum": ["panel", "wes", "wgs", "rnaseq"]
+            }
+        }
+    }
+}
