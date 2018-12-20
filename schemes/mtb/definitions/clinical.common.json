@@ -6,7 +6,7 @@
     "dna_finding": {
         "type": "object",
         "properties": {
-            "tracking": { "$ref": "#/tracking" },
+            "tracking": { "$ref": "clinical.tracking.json#/trace" },
             "variants": { 
                 "type": "object",
                 "properties": {
