@@ -1,0 +1,13 @@
+{
+    "name": {
+        "type": "string"
+    },
+    "person": {
+        "type": "object",
+        "properties": {
+            "name": { "$ref": "#/name" },
+            "birthday": { "$ref": "birthday.json#/birthday" }
+        },
+        "required": ["birthday"]
+    }
+}

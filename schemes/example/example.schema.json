@@ -6,6 +6,7 @@
         "id": {
             "type": "string"
         },
-        "name": { "$ref": "definition.json#/name" }
-    }
+        "person": { "$ref": "definitions/definition.json#/person" }
+    },
+    "required": ["person"]
 }

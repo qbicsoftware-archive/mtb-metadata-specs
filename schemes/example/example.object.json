@@ -1,3 +1,7 @@
 {
-    "id": "id123"
+    "id": "123",
+    "person": {
+        "name": "A name",
+        "birthday": "test"
+    }
 }
