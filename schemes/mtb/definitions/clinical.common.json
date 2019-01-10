@@ -1,8 +1,7 @@
 {
     "date": {
         "$id": "date",
-        "type": "string",
-        "pattern": "[0-9]{1,2}\\.[0-9]{1,2}\\.[0-9]{4}$"
+        "type": "date-time"
     },
     "dna_finding": {
         "$id": "dna_finding",
