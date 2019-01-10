@@ -19,22 +19,22 @@
                 "type": "number",
                 "minimum": "0"
             },
-            "consequence": { "$ref": "#consequence" }
+            "consequence": { "$ref": "#/consequence" }
         }
     },
     "consequence": {
         "$id": "consequence",
         "type": "object",
         "properties": {
-            "gene": { "anyOf": [{ "$ref": "#hgnc" }]},
-            "base_change": { "anyOf": [{ "$ref": "#hgvs" }] },
-            "aa_change": { "anyOf": [{ "$ref": "#hgvs" }] },
+            "gene": { "anyOf": [{ "$ref": "#/hgnc" }]},
+            "base_change": { "anyOf": [{ "$ref": "#/hgvs" }] },
+            "aa_change": { "anyOf": [{ "$ref": "#/hgvs" }] },
             "transcripts": {
                 "type": "array",
                 "items": { 
-                    "anyOf": [{ "$ref": "#refseq_id" }, { "$ref": "#ensemble_id" }] }
+                    "anyOf": [{ "$ref": "#/refseq_id" }, { "$ref": "#/ensemble_id" }] }
                 },
-            "effect": { "anyOf": [{ "$ref": "#germline_effect" }, { "$ref": "#somatic_effect" }] }
+            "effect": { "anyOf": [{ "$ref": "#/germline_effect" }, { "$ref": "#/somatic_effect" }] }
         }
     },
     "germline_effect": {
@@ -77,19 +77,19 @@
             "chromosome": { "type": "str" },
             "consequences": {
                 "type": "array",
-                "items": { "$ref": "#consequence" }
+                "items": { "$ref": "#/consequence" }
             }
         }
     },
     "structural_variant": {
         "type": "object",
         "properties": {
-            "type": { "$ref": "#manta_svtype" },
-            "left_breakpoint": { "$ref": "#breakpoint" },
-            "right_breakpoint": { "$ref": "#breakpoint" },
+            "type": { "$ref": "#/manta_svtype" },
+            "left_breakpoint": { "$ref": "#/breakpoint" },
+            "right_breakpoint": { "$ref": "#/breakpoint" },
             "consequences": {
                 "type": "array",
-                "items": { "$ref": "#consequence" }
+                "items": { "$ref": "#/consequence" }
             }
         }
     },

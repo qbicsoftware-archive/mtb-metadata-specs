@@ -1,7 +1,7 @@
 {
     "id": "123",
     "person": {
-        "name": "A name",
+        "name": 1,
         "birthday": "test"
     }
 }

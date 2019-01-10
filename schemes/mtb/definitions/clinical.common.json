@@ -1,7 +1,27 @@
 {
+    "patient": {
+        "$id": "patient",
+        "type": "object",
+        "properties": {
+            "id": { "$ref": "#/qbic_id" },
+            "date_of_birth": { "$ref": "#/date" },
+            "gender": { "$ref": "#/gender" }
+        }
+    },
     "date": {
         "$id": "date",
-        "type": "date-time"
+        "type": "string",
+        "format": "date"
+    },
+    "gender": {
+        "$id": "gender",
+        "type": "string",
+        "enum": ["male", "female", "hermaphrodite", "unknown"]
+    },
+    "qbic_id": {
+        "$id": "qbic_id",
+        "type": "string",
+        "pattern": "(Q[A-Z0-9]{4}[0-9]{3}[A-Z][A-Z0-9]$)|(Q[A-Z0-9]{4}ENTITY-[0-9]*$)"
     },
     "dna_finding": {
         "$id": "dna_finding",
@@ -67,13 +87,13 @@
         }
     },
     "dna_sample": {
-        "$id": "#dna_sample",
+        "$id": "dna_sample",
         "type": "object",
         "properties": {
-            "id": { "$ref": "#qbic_id" },
-            "finding": { "$ref": "#dna_finding" },
+            "id": { "$ref": "#/qbic_id" },
+            "finding": { "$ref": "#/dna_finding" },
             "quality": { "type": "string"},
-            "sequencing": { "$ref": "#sequencing" }
+            "sequencing": { "$ref": "#/sequencing" }
         }
     },
     "order": {
@@ -81,27 +101,8 @@
         "type": "object",
         "properties": {
             "id": { "type": "string" },
-            "date": { "type": "#date" }
+            "date": { "type": "#/date" }
         }
-    },
-    "patient": {
-        "$id": "patient",
-        "type": "object",
-        "properties": {
-            "id": { "$ref": "#qbic_id" },
-            "date_of_birth": { "$ref": "#date" },
-            "gender": { "$ref": "#gender" }
-        }
-    },
-    "gender": {
-        "$id": "gender",
-        "type": "string",
-        "enum": ["male", "female", "hermaphrodite", "unknown"]
-    },
-    "qbic_id": {
-        "$id": "qbic_id",
-        "type": "string",
-        "pattern": "(Q[A-Z0-9]{4}[0-9]{3}[A-Z][A-Z0-9]$)|(Q[A-Z0-9]{4}ENTITY-[0-9]*$)"
     },
     "sequencing": {
         "$id": "sequencing",
@@ -111,10 +112,10 @@
                 "type": "string"
             },
             "order": { 
-                "type": { "$ref": "#order" }
+                "type": { "$ref": "#/order" }
             },
             "run_date": {
-                "type": { "$ref": "#date" }
+                "type": { "$ref": "#/date" }
             },
             "technology": {
                 "type": "string",

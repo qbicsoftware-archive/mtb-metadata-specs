@@ -1,6 +1,6 @@
 {
-    "definitions": {
     "trace": {
+        "$id": "trace",
         "type": "object",
         "properties": {
             "stations": {
@@ -10,6 +10,7 @@
         }
     },
     "station": {
+        "$id": "station",
         "type": "object",
         "properties": {
             "facility": { "type": "string" },
@@ -20,5 +21,4 @@
             "submitTo": { "type": "string" }
         }
     }
-}
 }
