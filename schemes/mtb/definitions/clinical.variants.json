@@ -32,7 +32,7 @@
             "transcripts": {
                 "type": "array",
                 "items": { 
-                    "anyOf": [{ "$ref": "#refseq_id" }, { "$ref": "#ensemble_id" }] },
+                    "anyOf": [{ "$ref": "#refseq_id" }, { "$ref": "#ensemble_id" }] }
                 },
             "effect": { "anyOf": [{ "$ref": "#germline_effect" }, { "$ref": "#somatic_effect" }] }
         }
