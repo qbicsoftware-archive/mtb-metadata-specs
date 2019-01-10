@@ -8,9 +8,6 @@
         "$id": "dna_finding",
         "type": "object",
         "properties": {
-            "tracking": { 
-                "$ref": "trace"
-            },
             "variants": { 
                 "type": "object",
                 "properties": {
@@ -93,8 +90,14 @@
         "type": "object",
         "properties": {
             "id": { "$ref": "#qbic_id" },
-            "date_of_birth": { "$ref": "#date" }
+            "date_of_birth": { "$ref": "#date" },
+            "gender": { "$ref": "#gender" }
         }
+    },
+    "gender": {
+        "$id": "gender",
+        "type": "string",
+        "enum": ["male", "female", "hermaphrodite", "unknown"]
     },
     "qbic_id": {
         "$id": "qbic_id",
