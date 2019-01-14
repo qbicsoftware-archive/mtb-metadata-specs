@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://raw.githubusercontent.com/qbicsoftware/metadata-specs/master/schemes/mtb/finding.dna.schema.json",
+    "$id": "https://raw.githubusercontent.com/qbicsoftware/metadata-specs/master/schemes/example/example.schema.json",
     "type": "object",
     "properties": {
         "house": { "$ref": "definitions/buildings.json#/house" }
