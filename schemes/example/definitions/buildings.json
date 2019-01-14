@@ -11,7 +11,7 @@
     "room": {
         "type": "object",
         "properties": {
-            "door" : { "$ref": "definitions/stuff.json#/door" }
+            "door" : { "$ref": "stuff.json#/door" }
         }
     }
 }
