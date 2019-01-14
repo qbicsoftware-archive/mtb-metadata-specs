@@ -1,11 +1,8 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "file:///Users/sven1103/git/mtb-data-specs/schemes/example/example.schema.json",
+    "$id": "https://raw.githubusercontent.com/qbicsoftware/metadata-specs/master/schemes/mtb/finding.dna.schema.json",
     "type": "object",
     "properties": {
-        "id": {
-            "type": "string"
-        },
-        "person": { "$ref": "definitions/definition.json#/person" }
+        "house": { "$ref": "definitions/buildings.json#/house" }
     }
 }

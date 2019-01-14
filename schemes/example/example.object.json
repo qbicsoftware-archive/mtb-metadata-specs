@@ -1,7 +1,7 @@
 {
-    "id": "123",
-    "person": {
-        "name": 1,
-        "birthday": "test"
-    }
+   "house": {
+       "rooms": [ {
+           "door": { "material": 1 }
+       }]
+   }
 }
