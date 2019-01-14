@@ -5,7 +5,8 @@
     "description": "Somatic and germline variant based finding with diagnosis",
     "type": "object",
     "properties": {
-        "patient": { "$ref": "definitions/clinical.common.json#/patient" }
+        "patient": { "$ref": "definitions/clinical.common.json#/patient" },
+        "dna_sample": { "$ref": "definitions/clinical.common.json#/dna_sample" }
     },
     "required": ["patient"]
     

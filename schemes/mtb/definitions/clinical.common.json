@@ -35,7 +35,7 @@
                         "properties": {
                             "snv": { "$ref": "clinical.variants.json#/single_nucleotide_polymorphism" },
                             "cnv": { "$ref": "clinical.variants.json#/copynumber_variation" },
-                            "sv": { "$ref": "clinical.variants.json#/structual_variant" } 
+                            "sv": { "$ref": "clinical.variants.json#/structural_variant" } 
                         }
                     },
                     "somatic_variants": {
@@ -43,7 +43,7 @@
                         "properties": {
                             "snv": { "$ref": "clinical.variants.json#/single_nucleotide_polymorphism" },
                             "cnv": { "$ref": "clinical.variants.json#/copynumber_variation" },
-                            "sv": { "$ref": "clinical.variants.json#/structual_variant" } 
+                            "sv": { "$ref": "clinical.variants.json#/structural_variant" } 
                         }
                     }
                 }
@@ -101,7 +101,7 @@
         "type": "object",
         "properties": {
             "id": { "type": "string" },
-            "date": { "type": "#/date" }
+            "date": { "$ref": "#/date" }
         }
     },
     "sequencing": {
@@ -111,12 +111,8 @@
             "instrument": {
                 "type": "string"
             },
-            "order": { 
-                "type": { "$ref": "#/order" }
-            },
-            "run_date": {
-                "type": { "$ref": "#/date" }
-            },
+            "order": { "$ref": "#/order" },
+            "run_date": { "$ref": "#/date" },
             "technology": {
                 "type": "string",
                 "enum": ["panel", "wes", "wgs", "rnaseq"]

@@ -2,24 +2,50 @@
     "single_nucleotide_polymorphism": {
         "type": "object",
         "properties": {
-            "chromosome": { "type": "str" },
+            "chromosome": { "type": "string" },
             "start": { "type": "number" },
-            "reference": { "type": "str" },
-            "observed": { "type": "str" },
+            "reference": { "type": "string" },
+            "observed": { "type": "string" },
             "allele_frequency": {
                 "type": "number",
-                "minimum": "0",
-                "maximum": "1" 
+                "minimum": 0,
+                "maximum": 1 
             },
             "genotype": {
-                "type": "str",
+                "type": "string",
                 "enum": ["homozygous", "heterozygous"]
             },
             "coverage": {
                 "type": "number",
-                "minimum": "0"
+                "minimum": 0
             },
             "consequence": { "$ref": "#/consequence" }
+        }
+    },
+    "copynumber_variation": {
+        "type": "object",
+        "properties": {
+            "size": { "type": "string", "enum": [ "chromosome", "p-arm", "q-arm", "partial p-arm", "partial q-arm", "focal", "non-focal", "cluster" ] },
+            "type": { "type": "string", "enum": [ "del", "dup", "amp", "loh", "ins" ] },
+            "start": { "type": "number", "minimum": 0 },
+            "end": { "type": "number", "minimum": 0 },
+            "chromosome": { "type": "string" },
+            "consequences": {
+                "type": "array",
+                "items": { "$ref": "#/consequence" }
+            }
+        }
+    },
+    "structural_variant": {
+        "type": "object",
+        "properties": {
+            "type": { "$ref": "#/manta_svtype" },
+            "left_breakpoint": { "$ref": "#/breakpoint" },
+            "right_breakpoint": { "$ref": "#/breakpoint" },
+            "consequences": {
+                "type": "array",
+                "items": { "$ref": "#/consequence" }
+            }
         }
     },
     "consequence": {
@@ -39,69 +65,45 @@
     },
     "germline_effect": {
         "$id": "germline_effect",
-        "type": "str",
+        "type": "string",
         "enum": ["pathogenic", "probably_pathogenic"]
     },
     "somatic_effect": {
         "$id": "somatic_effect",
-        "type": "str",
+        "type": "string",
         "enum": ["activating", "inactivating", "function_changed", "probably_activating", "probably_inactivating", "probable_function_change", "ambiguous", "benign"]
     },
     "hgvs": {
         "$id": "hgvs",
-        "type": "str",
+        "type": "string",
         "pattern": ""
     },
     "hgnc": {
         "$id": "hgnc",
-        "type": "str",
+        "type": "string",
         "pattern": ""
     },
     "refseq_id": {
         "$id": "refseq_id",
-        "type": "str",
+        "type": "string",
         "pattern": ""
     },
     "ensemble_id": {
         "$id": "ensemble_id",
-        "type": "str",
+        "type": "string",
         "pattern": ""
     },
-    "copynumber_variation": {
-        "type": "object",
-        "properties": {
-            "size": { "type": "str", "enum": [ "chromosome", "p-arm", "q-arm", "partial p-arm", "partial q-arm", "focal", "non-focal", "cluster" ] },
-            "type": { "type": "str", "enum": [ "del", "dup", "amp", "loh", "ins" ] },
-            "start": { "type": "number", "minimum": 0 },
-            "end": { "type": "number", "minimum": 0 },
-            "chromosome": { "type": "str" },
-            "consequences": {
-                "type": "array",
-                "items": { "$ref": "#/consequence" }
-            }
-        }
-    },
-    "structural_variant": {
-        "type": "object",
-        "properties": {
-            "type": { "$ref": "#/manta_svtype" },
-            "left_breakpoint": { "$ref": "#/breakpoint" },
-            "right_breakpoint": { "$ref": "#/breakpoint" },
-            "consequences": {
-                "type": "array",
-                "items": { "$ref": "#/consequence" }
-            }
-        }
-    },
     "breakpoint": {
+        "$id": "breakpoint",
         "type": "object",
         "properties": {
-            "chromosome": { "type": "str" },
+            "chromosome": { "type": "string" },
             "position": { "type": "array", "items": [ { "type": "number" }, { "type": "number" }] }
         }
     },
-    "manta_sv_type": {
-        "type": "str",
+    "manta_svtype": {
+        "$id": "manta_svtype",
+        "type": "string",
         "enum": ["DEL", "INS", "DUP", "INV", "CNV", "BND"]
     }
 }
