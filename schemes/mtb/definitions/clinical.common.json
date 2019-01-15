@@ -109,9 +109,7 @@
         "$id": "sequencing",
         "type": "object",
         "properties": {
-            "instrument": {
-                "type": "string"
-            },
+            "instrument": { "type": "string" },
             "order": { "$ref": "#/order" },
             "run_date": { "$ref": "#/date" },
             "type": { "$ref": "#/ngs_type" }
