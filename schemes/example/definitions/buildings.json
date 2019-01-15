@@ -1,4 +1,5 @@
-{
+{   
+    "$id": "file:///Users/sven1103/git/mtb-data-specs/schemes/example/definitions/buildings.json",
     "house": {
         "type": "object",
         "properties": {
@@ -9,6 +10,7 @@
         }
     },
     "room": {
+        "$id": "room",
         "type": "object",
         "properties": {
             "door" : { "$ref": "stuff.json#/door" }

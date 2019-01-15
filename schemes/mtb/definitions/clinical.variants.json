@@ -1,4 +1,5 @@
-{
+{   
+    "$id": "https://raw.githubusercontent.com/qbicsoftware/metadata-specs/master/schemes/mtb/definitions/clinical.variants.json",
     "single_nucleotide_polymorphism": {
         "type": "object",
         "properties": {

@@ -1,4 +1,5 @@
 {
+    "$id": "https://raw.githubusercontent.com/qbicsoftware/metadata-specs/master/schemes/mtb/definitions/clinical.common.json",
     "patient": {
         "$id": "patient",
         "type": "object",
