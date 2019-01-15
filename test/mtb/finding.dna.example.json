@@ -1,7 +1,18 @@
 { 
     "patient": {
-        "id": "QUK17ENTITY-1",
-        "date_of_birth": "1985-03-11",
-        "test": 2
-    }
+        "id": "QTESTENTITY-1",
+        "date_of_birth": "1985-03-11-2"
+    }, 
+    "dna_sample": {
+        "id": "QTEST001AE",
+        "finding": {},
+        "quality": "good",
+        "sequencing": {
+            "instrument": "Illumina Hiseq 2500",
+            "order": { "id": "10023.1", "date": "2019-01-01" },
+            "run_date": "2019-01-02",
+            "type": "panesld"
+        }
+    },
+    "tracking": {}
 }
