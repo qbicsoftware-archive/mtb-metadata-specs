@@ -114,10 +114,12 @@
             },
             "order": { "$ref": "#/order" },
             "run_date": { "$ref": "#/date" },
-            "technology": {
-                "type": "string",
-                "enum": ["panel", "wes", "wgs", "rnaseq"]
-            }
+            "type": { "$ref": "#/ngs_type" }
         }
+    },
+    "ngs_type": {
+        "$id": "ngs_type",
+        "type": "string",
+        "enum": ["panel", "wes", "wgs", "rnaseq"]
     }
 }
