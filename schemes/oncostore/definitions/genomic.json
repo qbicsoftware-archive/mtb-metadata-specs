@@ -1,0 +1,18 @@
+{
+  "$id": "https://raw.githubusercontent.com/qbicsoftware/metadata-specs/master/schemes/oncostore/definitions/genomic.json",
+  "reference_genome": {
+    "$id": "reference_genome",
+    "type": "object",
+    "properties": {
+      "source": {
+        "$ref": "#/source"
+      },
+      "build": {
+        "$ref": "#/build"
+      },
+      "version": {
+        "$ref": "#/version"
+      }
+    }
+  }
+}

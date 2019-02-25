@@ -1,0 +1,46 @@
+{
+  "$id": "https://raw.githubusercontent.com/qbicsoftware/metadata-specs/master/schemes/oncostore/definitions/software.json",
+  "variant_calling": {
+    "$id": "variant_calling",
+    "type": "object",
+    "properties": {
+      "name": {
+        "$ref": "#/name"
+      },
+      "version": {
+        "$ref": "#/version"
+      },
+      "doi": {
+        "$ref": "#/doi"
+      }
+    }
+  },
+  "variant_annotation": {
+    "$id": "variant_annotation",
+    "type": "object",
+    "properties": {
+      "name": {
+        "$ref": "#/name"
+      },
+      "version": {
+        "$ref": "#/version"
+      },
+      "doi": {
+        "$ref": "#/doi"
+      }
+    }
+  },
+  "name": {
+    "$id": "name",
+    "type": "string"
+  },
+  "version": {
+    "$id": "version",
+    "type": "string"
+  },
+  "doi": {
+    "$id": "string",
+    "type": "string"
+  }
+}
+
