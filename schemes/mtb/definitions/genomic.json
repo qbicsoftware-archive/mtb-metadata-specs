@@ -1,5 +1,5 @@
 {
-  "$id": "https://raw.githubusercontent.com/qbicsoftware/metadata-specs/master/schemes/oncostore/definitions/genomic.json",
+  "$id": "https://raw.githubusercontent.com/qbicsoftware/metadata-specs/master/schemes/mtb/definitions/genomic.json",
   "reference_genome": {
     "$id": "reference_genome",
     "type": "object",

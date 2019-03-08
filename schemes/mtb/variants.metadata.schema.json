@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/qbicsoftware/metadata-specs/master/schemes/variants.metadata.schema.json",
+  "version": "0.1dev",
+  "title": "Variants metadata in the context of the OncoStore",
+  "description": "Metadata that has to be provided with VCF files in order to register variants in the oncostore",
+  "type": "object",
+  "properties": {
+    "variant_calling": { "$ref": "definitions/software.json#/variant_calling" },
+    "variant_annotation": { "$ref": "definitions/software.json#/variant_annotation" },
+    "reference_genome": {"$ref": "definitions/genomic.json#/reference_genome"},
+    "is_somatic": {"type": "boolean"},
+    "sample_id": {"$ref": "definitions/clinical.common.json#/qbic_id"},
+    "vcf_files": {"type": "array",
+      "items": [{"type": "string", "pattern": "([a-zA-Z0-9\s_\\.\-\(\):])+(.vcf|vcf.gz|VCF|VCF.gz|VCF.GZ)$"}]}
+  },
+  "required": ["variant_calling", "variant_annotation", "reference_genome", "is_somatic", "sample_id", "vcf_files"]
+}

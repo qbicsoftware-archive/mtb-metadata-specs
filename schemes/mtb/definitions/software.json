@@ -1,5 +1,5 @@
 {
-  "$id": "https://raw.githubusercontent.com/qbicsoftware/metadata-specs/master/schemes/oncostore/definitions/software.json",
+  "$id": "https://raw.githubusercontent.com/qbicsoftware/metadata-specs/master/schemes/mtb/definitions/software.json",
   "variant_calling": {
     "$id": "variant_calling",
     "type": "object",
